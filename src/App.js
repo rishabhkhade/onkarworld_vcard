@@ -4,12 +4,13 @@ import { FaInstagram } from "react-icons/fa6";
 import { GoGlobe } from "react-icons/go";
 import { FiFacebook } from "react-icons/fi";
 import { RiTwitterXFill } from "react-icons/ri";
-import { RiLinkedinLine } from "react-icons/ri";
+import { LuLinkedin } from "react-icons/lu";
 import { IoMailOutline } from "react-icons/io5";
-import { MdOutlineLocalPhone } from "react-icons/md";
+import { FiPhone } from "react-icons/fi";
 import { GoBook } from "react-icons/go";
 import logo from "./assets/logo.webp"
 import { QRCode } from "antd";
+import { SlSocialLinkedin } from "react-icons/sl";
 
 function App() {
 
@@ -49,9 +50,11 @@ function App() {
 
 
       <div class="crad_parent">
-        {/* <div class="card">
+        <div class="card">
           <div class="topsection">
-          <img src={logo} alt=""/>
+         <div class="span">
+         <img src={logo} alt=""/>
+         </div>
           </div>
           <div class="bottom">
             <div class="social-icons">
@@ -65,7 +68,7 @@ function App() {
                 <RiTwitterXFill />
               </span>
               <span>
-                <RiLinkedinLine />
+              <SlSocialLinkedin />
               </span>
             </div>
             <div class="content">
@@ -96,7 +99,7 @@ function App() {
               <div class="box">
                 <span>
                   {" "}
-                  <MdOutlineLocalPhone />
+                  <FiPhone />
                 </span>
                 <p style={{ fontSize: "16px" }}>+971 50 806 0418</p>
               </div>
@@ -105,9 +108,9 @@ function App() {
             </div>
             <div className="btn" onClick={saveContact}>Save Contact</div>
           </div>
-        </div> */}
+        </div>
 
-<div class="scanner"  >
+{/* <div class="scanner"  >
       <QRCode
     errorLevel="H"
     value={oqValue}
@@ -118,7 +121,7 @@ function App() {
           value={oqValue}
           onChange={(e) => setOqvalue(e.target.value)}
         />
-      </div>
+      </div> */}
       </div>
     </>
   );
