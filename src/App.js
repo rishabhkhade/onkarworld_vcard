@@ -8,12 +8,10 @@ import { LuLinkedin } from "react-icons/lu";
 import { IoMailOutline } from "react-icons/io5";
 import { FiPhone } from "react-icons/fi";
 import { GoBook } from "react-icons/go";
-import logo from "./assets/logo.webp"
-import { QRCode } from "antd";
+import logo from "./assets/logo.webp";
 import { SlSocialLinkedin } from "react-icons/sl";
 
 function App() {
-
   const saveContact = () => {
     // vCard content
     const vCardData = `
@@ -43,85 +41,74 @@ function App() {
     document.body.removeChild(link);
   };
 
-
-  const [oqValue, setOqvalue] = useState("https://ant.design/");
+ 
   return (
     <>
-
-
       <div class="crad_parent">
         <div class="card">
           <div class="topsection">
-         <div class="span">
-         <img src={logo} alt=""/>
-         </div>
+            <div class="span">
+              <img src={logo} alt="" />
+            </div>
           </div>
           <div class="bottom">
             <div class="social-icons">
-              <span>
+              <a href="https://www.instagram.com/onkarworld/" target="blank">
                 <FaInstagram />
-              </span>
-              <span>
+              </a>
+              <a href="https://www.facebook.com/onkar.world" target="blank">
                 <FiFacebook />
-              </span>
-              <span>
+              </a>
+              {/* <span>
                 <RiTwitterXFill />
-              </span>
-              <span>
-              <SlSocialLinkedin />
-              </span>
+              </span> */}
+              <a
+                href="https://www.linkedin.com/company/onkar-world/"
+                target="blank"
+              >
+                <SlSocialLinkedin />
+              </a>
             </div>
             <div class="content">
-              <div class="box">
+              <a class="box" href="https://www.onkarworld.com/">
                 <span>
                   {" "}
                   <GoGlobe />
                 </span>
-                <p style={{ fontSize: "16px" }}>onkarworld.com</p>
-              </div>
+                <a style={{ fontSize: "16px" }}>onkarworld.com</a>
+              </a>
 
               <div class="box">
                 <span>
                   {" "}
                   <GoBook />
                 </span>
-                <p style={{ fontSize: "16px" }}>Brochures Brochures</p>
+                <a style={{ fontSize: "16px" }}>Brochures Brochures</a>
               </div>
 
-              <div class="box">
+              <a class="box" href="mailto:contact@onkarworld.com">
                 <span>
                   {" "}
                   <IoMailOutline />
                 </span>
-                <p style={{ fontSize: "16px" }}>contact@onkarworld.com</p>
-              </div>
+                <a style={{ fontSize: "16px" }}>contact@onkarworld.com</a>
+              </a>
 
-              <div class="box">
+              <a class="box" href="tel:+971 50 806 0418">
                 <span>
                   {" "}
                   <FiPhone />
                 </span>
-                <p style={{ fontSize: "16px" }}>+971 50 806 0418</p>
-              </div>
-
-              
+                <a style={{ fontSize: "16px" }}>+971 50 806 0418</a>
+              </a>
             </div>
-            <div className="btn" onClick={saveContact}>Save Contact</div>
+            <div className="btn" onClick={saveContact}>
+              Save Contact
+            </div>
           </div>
         </div>
 
-{/* <div class="scanner"  >
-      <QRCode
-    errorLevel="H"
-    value={oqValue}
-    icon="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg"
-  />
-        <input
-          type="text"
-          value={oqValue}
-          onChange={(e) => setOqvalue(e.target.value)}
-        />
-      </div> */}
+      
       </div>
     </>
   );
