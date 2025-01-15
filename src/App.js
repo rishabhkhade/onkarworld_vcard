@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.scss";
 import { FaInstagram } from "react-icons/fa6";
 import { GoGlobe } from "react-icons/go";
@@ -9,6 +9,7 @@ import { IoMailOutline } from "react-icons/io5";
 import { MdOutlineLocalPhone } from "react-icons/md";
 import { GoBook } from "react-icons/go";
 import logo from "./assets/logo.webp"
+import { QRCode } from "antd";
 
 function App() {
 
@@ -40,12 +41,15 @@ function App() {
     // Cleanup
     document.body.removeChild(link);
   };
+
+
+  const [oqValue, setOqvalue] = useState("https://ant.design/");
   return (
     <>
 
 
       <div class="crad_parent">
-        <div class="card">
+        {/* <div class="card">
           <div class="topsection">
           <img src={logo} alt=""/>
           </div>
@@ -101,7 +105,20 @@ function App() {
             </div>
             <div className="btn" onClick={saveContact}>Save Contact</div>
           </div>
-        </div>
+        </div> */}
+
+<div class="scanner"  >
+      <QRCode
+    errorLevel="H"
+    value={oqValue}
+    icon="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg"
+  />
+        <input
+          type="text"
+          value={oqValue}
+          onChange={(e) => setOqvalue(e.target.value)}
+        />
+      </div>
       </div>
     </>
   );
