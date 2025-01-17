@@ -10,20 +10,21 @@ import { FiPhone } from "react-icons/fi";
 import { GoBook } from "react-icons/go";
 import logo from "./assets/logo.webp";
 import { SlSocialLinkedin } from "react-icons/sl";
+import pdf from "././pdf/Onkar World_Brochure Dubai 02.pdf"
 
 function App() {
   const saveContact = () => {
     // vCard content
     const vCardData = `
-    BEGIN:VCARD
-    VERSION:3.0
-    FN:Onkar World
-    ORG:Onkar World
-    TITLE:Onkar World
-    TEL:+971508060418
-    EMAIL:contact@onkarworld.com
-    URL:https://www.onkarworld.com/
-    END:VCARD`;
+BEGIN:VCARD
+VERSION:3.0
+FN:DIwise
+ORG:Onkar World
+TITLE:Onkar World
+TEL:+971508060418
+EMAIL:contact@onkarworld.com
+URL:https://www.onkarworld.com/
+END:VCARD`;
 
     // Create a Blob for the vCard file
     const blob = new Blob([vCardData], { type: "text/vcard" });
@@ -31,7 +32,7 @@ function App() {
     // Create a link element
     const link = document.createElement("a");
     link.href = URL.createObjectURL(blob);
-    link.download = "OnkarWorld.vcf"; // vCard file name
+    link.download = "Onkar_World.vcf"; // vCard file name
     document.body.appendChild(link);
 
     // Trigger the download
@@ -83,7 +84,7 @@ function App() {
                   {" "}
                   <GoBook />
                 </span>
-                <a style={{ fontSize: "16px" }}>Brochures Brochures</a>
+                <a href={pdf} target="_blank" style={{ fontSize: "16px" }}>Brochure</a>
               </div>
 
               <a class="box" href="mailto:contact@onkarworld.com">
