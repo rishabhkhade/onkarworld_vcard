@@ -10,7 +10,7 @@ import { FiPhone } from "react-icons/fi";
 import { GoBook } from "react-icons/go";
 import logo from "./assets/logo.webp";
 import { SlSocialLinkedin } from "react-icons/sl";
-import pdf from "././pdf/Onkar World_Brochure Dubai 02.pdf"
+import pdf from "././pdf/Onkar World Brochure (2mb).pdf";
 
 function App() {
   const saveContact = () => {
@@ -42,7 +42,6 @@ END:VCARD`;
     document.body.removeChild(link);
   };
 
- 
   return (
     <>
       <div class="crad_parent">
@@ -84,7 +83,9 @@ END:VCARD`;
                   {" "}
                   <GoBook />
                 </span>
-                <a href={pdf} target="_blank" style={{ fontSize: "16px" }}>Brochure</a>
+                <a href={pdf} target="_blank" style={{ fontSize: "16px" }}>
+                  Brochure
+                </a>
               </div>
 
               <a class="box" href="mailto:contact@onkarworld.com">
@@ -108,8 +109,6 @@ END:VCARD`;
             </div>
           </div>
         </div>
-
-      
       </div>
     </>
   );
